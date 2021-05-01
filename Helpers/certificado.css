@@ -1,0 +1,34 @@
+#pdf {
+    width: 100vw;
+    
+}
+
+
+.medalla {
+    background-image: url('../../imagenes/medalla.png');
+    background-repeat: no-repeat;
+    background-size: 8.6rem;
+    height: 18rem;
+    width: 15rem;
+    margin: -5rem 0 0 5rem;
+}
+
+.firma1 {
+    width: 15rem;
+    margin: 0rem 0 0 6rem;
+}
+
+.firma1 img {
+    width: 8rem;
+}
+
+
+
+.firma2 {
+    width: 15rem;
+    margin: 13rem 0 0 -3rem;
+}
+
+.firma2 img {
+    width: 8rem;
+}
