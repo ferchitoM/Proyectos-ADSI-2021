@@ -1,10 +1,10 @@
-function generarPDF(div) {
+function generarPDF(div, nombre_archivo, nueva_ventana) {
     
     const pagina = document.getElementById(div);
 
     var opt = {
         margin: 0, //[0.5, 0.5, 0.5, 0.5],
-        filename: 'certificado.pdf',
+        filename: nombre_archivo + '.pdf',
         image: {
             type: 'jpeg',
             quality: 0.98
@@ -24,5 +24,16 @@ function generarPDF(div) {
         }
     };
 
+    //SI SE DESEA VER EL PDF EN UNA NUEVA VENTANA
+    if(nueva_ventana) {
+
+        html2pdf().set(opt).from(pagina).toPdf().get('pdf').then(function(pdf) {
+            window.open(pdf.output('bloburl'), '_blank');
+        });
+
+    }
+
+    //SINO ENTONCES SE DESCARGA
     return html2pdf().set(opt).from(pagina);
+    
 }
